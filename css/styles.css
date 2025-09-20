@@ -1,0 +1,572 @@
+:root{
+    --font-family: "DM Sans", sans-serif;
+	--black: #121212;
+	--white: #fff;
+	--brown: #bea69e;
+    --background: #1d1d1d;
+    --card-modal-color:linear-gradient(180deg, #060707 0%, #1d1d1d 100%);
+}
+body{
+    background-color: var(--black);
+    font-family: var(--font-family);
+    color:var(--text-color);
+}
+.container{
+    width: 1240px;
+    margin:0 auto;
+}
+section{
+    padding:75px 0;
+}
+
+/*----------------- GENERAL STYLE CLASSES--------------- */
+
+/* TEXT - TİTLE - SPAN */
+.hero-text,.about-text,.our-courses-text,
+.card-text,.mentor-text,.sign-up-text,.reviews-text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    color:var(--white);
+    max-width: 418px;
+}
+.second-title{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 59px;
+    line-height: 108%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.subtitle{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 112%;
+    letter-spacing: -0.04em;
+    color: var(--white);
+}
+.card-title,.mentor-title,.reviews-title{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 114%;
+    color: var(--white);
+}
+.span{
+    color:var(--brown);
+}
+/*------------------ HEADER ----------------*/
+
+.header-container{
+    /* padding:20px 100px 80px 100px; */
+    padding-top:20px;
+    padding-bottom: 5px;
+    margin: 0 auto;
+    display:flex;
+    gap:20px;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--black);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    width: 982px;
+    height: 60px;
+    padding:21px 50px;
+}
+.navbar-list{
+    display:flex;
+    gap:40px;
+}
+.navbar-item-link{
+    display:inline-block;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:var(--white);
+}
+.header-btn{
+    border-radius: 12px;
+    padding: 16px 81px;
+    min-width: 238px;
+    height: 60px;
+    background-color: var(--white);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 156%;
+    text-transform: uppercase;
+    text-align: center;
+    color:var(--black);
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+/* Header Hover, Focus and Active Effect */
+.navbar-item-link:hover,
+.navbar-item-link:focus{
+    transform:scale(1.2);
+    color: var(--brown);
+}
+.header-btn:hover,
+.header-btn:focus,
+.header-btn:active{
+    transform: matrix(1.05, 0.1, -0.1, 1.05, 0, 0);
+    background-color: var(--background);
+    color:var(--brown);
+    box-shadow: 3px 7px 2px  rgba(190, 166, 158, 0.6) , 0 0 15px rgba(255, 223, 0, 0.8); /* ışıltı efekti */;
+}
+/* --------- HERO SECTİON STYLES ARE HERE ---------------- */
+
+.hero-container{
+    display:flex;
+    gap:130px;
+    background-color: var(--background);
+    border-radius: 30px;
+    padding: 80px 100px 0 50px;
+}
+
+.title-content{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.hero-title{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 106%;
+    letter-spacing: -0.01em;
+    color:var(--white);
+    max-width: 563px;
+    transition: all 0.9s ease-in-out;
+}
+.hero-title:hover,
+.hero-title:focus{
+    color:var(--brown)
+}
+.hero-title:hover .hero-span,
+.hero-title:focus .hero-span{
+    color:var(--white);
+}
+.hero-span{
+    font-style: italic;
+    font-weight: 400;
+    transition: all 0.9s ease-in-out;
+}
+.title-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:136px;
+}
+.students-img-wrapper{
+    display:flex;
+    gap:12px;
+}
+.students-img-wrapper img{
+    width: 54px;
+    height: 54px;
+}
+/*---------------------- For İmages Styles -------------------------------- */
+.students-img-wrapper {
+    position: relative; /* İçerideki öğeleri konumlandırmak için */
+    min-width: 200px; /* Genişlik, görsellerin toplam genişliğine göre ayarlanabilir */
+    height: 54px; /* Yükseklik, görsellerin yüksekliğine göre ayarlanabilir */
+}
+
+.img-container {
+    position: relative; /* İçerideki görselleri konumlandırmak için */
+    width: 100%;
+    height: 100%;
+}
+
+.students-img-wrapper img {
+    position: absolute; /* Görsellerin üst üste binmesini sağlar */
+    width: 54px; /* Görsellerin genişliği */
+    height: auto; /* Yükseklik, genişliğe göre ayarlanır */
+}
+
+/* Birinci görsel */
+.students-img-first {
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* İkinci görsel */
+.students-img-second {
+    top: 0; /* Birinci görselin biraz üstünde */
+    left: 35px; /* Birinci görselin biraz sağında */
+    z-index: 1;
+}
+
+/* Üçüncü görsel */
+.students-img-third {
+    top: 0; /* İkinci görselin biraz üstünde */
+    left: 70px; /* İkinci görselin biraz sağında */
+}
+/* ----------------------------------------------------------------------------- */
+.students-content{
+    display:flex;
+    gap:40px;
+}
+.reviews-wrapper{
+    display:flex;
+    gap:20px;
+}
+.arrow-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    margin-left:95px;
+    min-width: 82px;
+}
+.icon-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--brown);
+    border-radius: 100px;
+    transition: all 0.7s ease-in-out;
+}
+.reviews-text-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+.icon-container:hover,
+.icon-container:focus {
+    transform: rotateX(180deg); /* 180 derece döndürme */
+    fill: var(--text-color); /* SVG fill rengi */
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8); /* ışıltı efekti */
+    background: linear-gradient(to right, var(--brown), #ecbfbd, #f1d7ce, var(--white)); /* Gradient arka plan */
+}
+/* Photo Animation */
+.photo-wrapper {
+    display: inline-block;
+    overflow: hidden; /* Görüntünün dışa taşmaması için */
+}
+
+.photo-img {    
+    transition: all 0.5s ease; /* Transform geçişini tanımlar */
+}
+
+.photo-wrapper:hover .photo-img {
+    filter: brightness(1.2); /* Parlaklık artırma */
+    transform: scale(0.9); /* Görseli büyütür */
+}
+
+/*--------------------- YOUR PHOTO SECTİON STYLES ARE HERE------------ */
+.your-photo{
+    padding: 0;
+}
+/* -------------------- ABOUT US SECTİON STYLES ARE HERE--------------- */
+.about-us-container{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+.about-text-img-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap:40px;
+}
+.about-img-content{
+    border: 1px solid #000;
+    border-radius: 100px;
+    width: 560px;
+    height: 240px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.7s ease-in-out;
+}
+.about-img-content:hover{
+    background-color: var(--brown);
+    transform: scale(0.8);
+}
+.about-img-content img{
+    width: 100%;
+    height: auto;
+    transition: all 0.7s ease-in-out;
+}
+.about-img-content:hover img{
+    transform: rotate(270deg) scale(0.9);
+}
+.about-text-wrapper{
+    width: 314px;
+}
+.about-second-text-wrapper{
+    width: 276px;
+}
+.about-text{
+    font-size: 16px;
+    line-height: 125%;
+}
+
+/* ------------------OUR COURSES SECTİON STYLE ARE HERE--------------- */
+.our-courses-container{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+.title-text-content{
+    display:flex;
+    justify-content: space-between;
+}
+.card-wrapper{
+    display:flex;
+    gap:20px;
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    padding:32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    width: 400px;
+    height: 452px;
+    background: linear-gradient(180deg, #060707 0%, #1d1d1d 100%);
+    perspective: 1000px; /* 3D görünüm için perspective ekledik */
+    transition: all 0.7s ease-in-out;
+}
+.card:hover,
+.card:focus{ 
+    transform: scale(1.1) rotate(10deg); /* Sağ kenar geri, sol kenar ileri hareket eder */
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8); /* ışıltı efekti */
+    z-index: 1; /* Üstte kalmasını sağlar */
+    opacity: 1; /* Hover yapılan kartın opaklık değeri sabit kalır */
+    background: linear-gradient(180deg, var(--background) 50%, #060707 100%,);
+}
+
+.card-wrapper:hover .card {
+    opacity: 0.5; /* Diğer kartların opaklık değeri düşer */
+}
+
+.card-wrapper:hover .card:hover {
+    opacity: 1; /* Hover yapılan kartın opaklık değeri normal kalır */
+}
+
+.card-svg-content{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:32px;
+}
+.card-text{
+    color: rgba(255, 255, 255, 0.5);
+}
+.card-text-content .card-text{
+    font-size: 16px;
+}
+.card-svg{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: var(--background);
+}
+.icon-arrow-up{
+    fill:#D9D9D9;
+}
+.card-title-content{
+    margin-bottom:200px;
+}
+
+/* ------------------------ OUR MENTORS SECTİON ----------------------------- */
+
+.our-mentors-container{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+.mentor-content{
+    display:flex;
+    gap:100px;
+    margin: 0 103px;
+}
+.mentor-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+.mentor-text-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:4px;
+}
+.mentor-wrapper:hover,
+.mentor-wrapper:focus{
+    transform: scale(0.8); /* Hover durumunda resmi büyüt */
+    opacity: 1;/* Hover durumunda daha belirgin gölge */
+}
+.mentor-content:hover .mentor-wrapper {
+    opacity: 0.5; /* Diğer mentorların opacity değeri düşer */
+}
+
+.mentor-content:hover .mentor-wrapper:hover {
+    opacity: 1; /* Hover yapılan mentorun opacity değeri normal kalır */
+}
+/* ------------------------SİGN UP SECTİON STYLES ARE HERE-------------------- */
+.sign-up-container{
+    display:flex;
+    gap:200px;
+}
+.form-content{
+    display:flex;
+    flex-direction: column;
+    gap:40px;
+    width: 480px;
+    max-height: 578px;
+}
+.form-title-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    gap:14px;
+}
+.signup-input{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    width: 480px;
+    height: 60px;
+    background-color: transparent;
+    outline: transparent;
+    padding:21px 18px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--white);
+    opacity: 0.7;
+}
+.text-area{
+    height: 120px;
+    resize: none;
+}
+.form-btn{
+    border-radius: 12px;
+    padding: 16px 216px;
+    width: 479px;
+    height: 60px;
+    background: var(--white);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 156%;
+    text-transform: uppercase;
+    color: var(--black);
+    border:none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.form-btn:hover,
+.form-btrn:focus{
+    transform: matrix(1.02, 0.05, -0.05, 1.02, 0, 0);
+    background-color: var(--background);
+    color:var(--brown);
+    box-shadow: 3px 7px 2px  rgba(190, 166, 158, 0.6) , 0 0 15px rgba(255, 223, 0, 0.8); /* ışıltı efekti */;
+}
+.form .sign-up-text{
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 480px;
+}
+.privacy-link{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+.camera-photo-content{
+    position: relative;
+    width: 560px;
+    height: 540px;
+}
+.camera-position{
+    border-radius: 1000px;
+    width: 190px;
+    height: 288px;
+    background-color: var(--brown);
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    transition: all 0.7s ease-in-out;
+}
+.camera-position img {
+    position: relative;
+    top:80px;
+    left:-5px;
+    bottom:62px;
+}
+.camera-position:hover{
+    filter: brightness(1.2);
+    background: linear-gradient(135deg, rgba(190, 166, 158, 0.9) 0%, rgba(255, 159, 64, 0.7) 50%, rgba(255, 223, 0, 0.8) 100%); /* 3 renkli ışıltı efekti */;
+}
+.video-camera-position{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    border-radius: 1000px;
+    width: 350px;
+    height: 540px;
+    background-color: var(--background);
+    transition: all 0.7s ease-in-out;
+}
+.video-camera-position:hover,
+.video-camera-position:focus{
+    filter: brightness(1.2);
+    background: linear-gradient(135deg, rgba(190, 166, 158, 0.9) 0%, rgba(255, 159, 64, 0.7) 50%, rgba(255, 223, 0, 0.8) 100%); /* 3 renkli ışıltı efekti */;
+}
+/* ----------------- REVİEWS SECTİONS STYLES  ARE HERE------------------ */
+.reviews-container{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+.reviews-content{
+    display:flex;
+    gap:20px;
+}
+.first-reviews-content{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    padding:20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    width: 610px;
+    height: 196px;
+}
+.student-info-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.student-img-text-wrapper{
+    display:flex;
+    gap:10px;
+}
+.reviews-svg-wrapper{
+    display:flex;
+    gap:4px;
+}
+.reviews-title{
+    margin-bottom:4px;
+}
+.students-info .reviews-text{
+    color: rgba(255, 255, 255, 0.5);
+}
+.second-reviews-content .reviews-text{
+    max-width:570px;
+    font-size: 16px;
+    line-height: 125%;
+}
